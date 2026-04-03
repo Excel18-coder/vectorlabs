@@ -1,0 +1,77 @@
+import { motion } from "framer-motion";
+import { Smartphone, Globe, Code2, Cloud, Database, Cpu } from "lucide-react";
+
+const services = [
+  {
+    icon: Smartphone,
+    title: "Mobile Development",
+    description: "Native and cross-platform mobile apps for iOS and Android with pixel-perfect UIs.",
+  },
+  {
+    icon: Globe,
+    title: "Web Applications",
+    description: "Scalable web platforms built with modern frameworks and cutting-edge architecture.",
+  },
+  {
+    icon: Code2,
+    title: "Custom Software",
+    description: "Bespoke software solutions tailored to your unique business requirements.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Solutions",
+    description: "Cloud-native architecture, migration, and infrastructure optimization.",
+  },
+  {
+    icon: Database,
+    title: "API & Backend",
+    description: "Robust APIs and backend systems designed for performance and reliability.",
+  },
+  {
+    icon: Cpu,
+    title: "AI & Automation",
+    description: "Intelligent automation and machine learning integrations for smarter workflows.",
+  },
+];
+
+const ServicesSection = () => {
+  return (
+    <section id="services" className="py-24 md:py-32">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <p className="text-sm uppercase tracking-widest text-primary mb-3">What We Do</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            End-to-End Software Services
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group glass rounded-xl p-8 hover:glow-border transition-all duration-300"
+            >
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
