@@ -45,8 +45,8 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm uppercase tracking-widest text-primary mb-3">What We Do</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">What We Do</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
             End-to-End Software Services
           </h2>
         </motion.div>
@@ -59,12 +59,12 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group glass rounded-xl p-8 hover:glow-border transition-all duration-300"
+              className="group rounded-2xl border border-border bg-background p-8 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
