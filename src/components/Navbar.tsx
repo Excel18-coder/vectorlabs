@@ -17,12 +17,11 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 glass"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
     >
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-heading font-bold tracking-tight">
-          <span className="text-gradient">Vector</span>
-          <span className="text-foreground"> Labs</span>
+        <a href="#" className="text-xl font-bold tracking-tight text-foreground">
+          Vector <span className="text-primary">Labs</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -30,12 +29,12 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button size="sm" className="rounded-full px-6">
             Get in Touch
           </Button>
         </div>
@@ -52,20 +51,20 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
-          className="md:hidden glass border-t border-border"
+          className="md:hidden bg-background border-t border-border"
         >
           <div className="container py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
+            <Button size="sm" className="rounded-full w-fit px-6">
               Get in Touch
             </Button>
           </div>

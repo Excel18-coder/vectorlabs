@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-12">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="font-heading font-bold text-lg">
-          <span className="text-gradient">Vector</span> Labs
+        <div className="font-bold text-lg text-foreground">
+          Vector <span className="text-primary">Labs</span>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
           <a href="#services" className="hover:text-foreground transition-colors">Services</a>

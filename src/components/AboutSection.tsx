@@ -9,9 +9,8 @@ const stats = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
-      <div className="container relative z-10">
+    <section id="about" className="py-24 md:py-32 bg-secondary/50">
+      <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -19,17 +18,17 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm uppercase tracking-widest text-primary mb-3">About Us</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Engineering at the <span className="text-gradient">Speed of Innovation</span>
+            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">About Us</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-foreground">
+              Engineering at the Speed of Innovation
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-              Vector Labs is a technology studio that transforms ideas into 
-              world-class software products. We partner with startups and enterprises 
+              Vector Labs is a technology studio that transforms ideas into
+              world-class software products. We partner with startups and enterprises
               to design, build, and scale digital solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our team of senior engineers, designers, and strategists work 
+              Our team of senior engineers, designers, and strategists work
               collaboratively to deliver products that users love and businesses rely on.
             </p>
           </motion.div>
@@ -41,15 +40,15 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid grid-cols-2 gap-6"
           >
-            {stats.map((stat, i) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="glass rounded-xl p-6 text-center"
+                className="rounded-2xl border border-border bg-background p-6 text-center"
               >
-                <div className="text-4xl md:text-5xl font-heading font-bold text-gradient mb-2">
+                <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </motion.div>
