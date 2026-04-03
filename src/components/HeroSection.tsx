@@ -20,7 +20,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm text-muted-foreground mb-8">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Now accepting new projects for Q2 2026
           </div>
 
