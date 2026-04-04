@@ -43,27 +43,21 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 md:py-32 relative overflow-hidden">
-      {/* Futuristic background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute inset-0 opacity-5">
-        <svg preserveAspectRatio="none" viewBox="0 0 1000 1000" className="w-full h-full">
-          <defs>
-            <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'rgb(var(--color-primary))', stopOpacity: 0.1 }} />
-              <stop offset="100%" style={{ stopColor: 'rgb(var(--color-primary))', stopOpacity: 0 }} />
-            </linearGradient>
-          </defs>
-          <rect width="1000" height="1000" fill="url(#gridGradient)" />
-          {Array.from({ length: 10 }).map((_, i) => (
-            <line key={`h${i}`} x1="0" y1={i * 100} x2="1000" y2={i * 100} stroke="currentColor" strokeWidth="0.5" opacity="0.1" />
-          ))}
-          {Array.from({ length: 10 }).map((_, i) => (
-            <line key={`v${i}`} x1={i * 100} y1="0" x2={i * 100} y2="1000" stroke="currentColor" strokeWidth="0.5" opacity="0.1" />
-          ))}
-        </svg>
-      </div>
+      {/* Tech-focused background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-950 to-slate-950" />
+      {/* Hexagon pattern background */}
+      <svg className="absolute inset-0 w-full h-full opacity-15" preserveAspectRatio="none">
+        <defs>
+          <pattern id="hexagon" width="100" height="100" patternUnits="userSpaceOnUse">
+            <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="none" stroke="rgba(59,130,246,0.5)" strokeWidth="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hexagon)" />
+      </svg>
+      {/* Tech glow elements */}
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-600 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-1000" />
+      
       {/* End background */}
       <div className="container relative z-10">
         <motion.div
@@ -72,11 +66,11 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">What We Do</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
+          <p className="text-sm uppercase tracking-widest text-blue-400 font-semibold mb-3" style={{ textShadow: '0 0 15px rgba(0,0,0,0.7)' }}>What We Do</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" style={{ textShadow: '0 0 25px rgba(0,0,0,0.8)' }}>
             End-to-End Software Services
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-2xl mx-auto" style={{ textShadow: '0 0 15px rgba(0,0,0,0.6)' }}>
             We cover the full spectrum of software development — from ideation to deployment and beyond.
           </p>
         </motion.div>

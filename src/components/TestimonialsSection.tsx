@@ -25,12 +25,23 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-gradient-to-b from-secondary/50 via-secondary/30 to-background relative overflow-hidden">
-      {/* Futuristic background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-      </div>
+    <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Tech-focused background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900" />
+      {/* Sphere pattern background */}
+      <svg className="absolute inset-0 w-full h-full opacity-20" preserveAspectRatio="none">
+        <defs>
+          <pattern id="spheres" width="100" height="100" patternUnits="userSpaceOnUse">
+            <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(59,130,246,0.3)" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="20" fill="none" stroke="rgba(59,130,246,0.2)" strokeWidth="0.5"/>
+            <circle cx="50" cy="50" r="3" fill="rgba(59,130,246,0.5)" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#spheres)" />
+      </svg>
+      {/* Ambient lighting */}
+      <div className="absolute top-0 right-1/3 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse" />
+      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-500" />
       {/* End background */}
       <div className="container relative z-10">
         <motion.div
@@ -39,11 +50,11 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">Client Stories</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
+          <p className="text-sm uppercase tracking-widest text-blue-400 font-semibold mb-3" style={{ textShadow: '0 0 15px rgba(0,0,0,0.7)' }}>Client Stories</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" style={{ textShadow: '0 0 25px rgba(0,0,0,0.8)' }}>
             What Our Clients Say
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-2xl mx-auto" style={{ textShadow: '0 0 15px rgba(0,0,0,0.6)' }}>
             Don't just take our word for it — hear from the companies we've helped build and scale.
           </p>
         </motion.div>

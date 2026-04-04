@@ -11,23 +11,21 @@ const highlights = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 px-4 sm:px-0">
-      {/* Futuristic animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background" />
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <svg className="absolute inset-0 w-full h-full opacity-5" preserveAspectRatio="none">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none" />
-      {/* End background */}
-
+      {/* Animated tech background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
+      <svg className="absolute inset-0 w-full h-full opacity-20" preserveAspectRatio="none">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(59,130,246,0.3)" strokeWidth="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+      {/* Glowing orbs */}
+      <div className="absolute top-20 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-500" />
+      
       <div className="container relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,13 +37,13 @@ const HeroSection = () => {
             Building scalable products
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.05] tracking-tight max-w-5xl mx-auto text-foreground">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.05] tracking-tight max-w-5xl mx-auto text-white" style={{ textShadow: '0 0 30px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,0.6)' }}>
             Design,Build & Scale
             <br />
-            <span className="text-primary">world-class software</span>
+            <span className="text-blue-400">world-class software</span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed px-2" style={{ textShadow: '0 0 20px rgba(0,0,0,0.7)' }}>
             From mobile apps to enterprise platforms, Vector Labs engineers scalable 
             solutions trusted by startups and Fortune 500 companies alike.
           </p>

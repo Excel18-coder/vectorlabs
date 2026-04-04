@@ -98,6 +98,7 @@ const FounderSection = () => {
 
           {/* Content Section */}
           <motion.div variants={itemVariants} className="order-1 lg:order-2 px-4 sm:px-0">
+            {/* Founder Info */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
