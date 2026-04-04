@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "12+", label: "Years Experience" },
-  { value: "30+", label: "Engineers" },
+  { value: "15+", label: "Projects Delivered" },
+  { value: "5+", label: "Years Experience" },
+  { value: "5", label: "Engineers" },
   { value: "99%", label: "Client Retention" },
-  { value: "$200M+", label: "Revenue Generated for Clients" },
+  { value: "$10k+", label: "Revenue Generated for Clients" },
   { value: "15+", label: "Industries Served" },
 ];
 
@@ -36,14 +36,14 @@ const AboutSection = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               Vector Labs is a technology studio that transforms ideas into
-              world-class software products. Founded in 2014, we've partnered with
-              startups, scale-ups, and enterprises across 15+ industries to design,
+              world-class software products. Founded in 2025, we've partnered with
+              startups, scale-ups, and enterprises across 5+ industries to design,
               build, and scale digital solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Our team of 30+ senior engineers, designers, and strategists work
-              collaboratively from offices in San Francisco, London, and Cape Town
-              to deliver products that users love and businesses rely on.
+              Our team of 5 senior engineers, designers, and strategists work
+              collaboratively to deliver high quality products.
+            
             </p>
 
             <div className="space-y-3">

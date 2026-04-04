@@ -21,11 +21,11 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm text-muted-foreground mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Now accepting new projects for Q2 2026
+            Building scalable products
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.05] tracking-tight max-w-5xl mx-auto text-foreground">
-            Build, scale & ship
+            Design,Build & Scale
             <br />
             <span className="text-primary">world-class software</span>
           </h1>
@@ -67,7 +67,7 @@ const HeroSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mt-16 flex flex-wrap justify-center gap-3"
         >
-          {["React", "Swift", "Kotlin", "Node.js", "Flutter", "AWS", "TypeScript", "Python", "Docker", "PostgreSQL", "GraphQL", "Figma"].map((tech) => (
+          {["React", "Swift", "Rust", "Node.js", "Flutter", "AWS", "TypeScript", "Python", "Docker", "PostgreSQL", "GO", "Figma"].map((tech) => (
             <span
               key={tech}
               className="px-4 py-2 rounded-full bg-secondary text-sm font-medium text-muted-foreground"
@@ -86,7 +86,7 @@ const HeroSection = () => {
         >
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">Trusted by innovative companies</p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
-            {["TechCorp", "Finova", "MediSync", "CloudScale", "DataBridge", "NexaPay"].map((name) => (
+            {["Smart moves cash flow", "Opesha" , "Cipher"].map((name) => (
               <span key={name} className="text-lg font-bold text-muted-foreground/40 tracking-wide">
                 {name}
               </span>

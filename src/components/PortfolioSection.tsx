@@ -3,32 +3,32 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "FinTrack Pro",
+    title: "Opesha solutions",
     category: "Fintech",
-    description: "A real-time portfolio tracking platform processing 2M+ transactions daily for retail investors.",
+    description: "A real-time fintech platform that leverages AI to connect business enthusiasts with Investors.",
     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
-    metric: "2M+ daily transactions",
+    metric: "$3k+ transactions daily",
   },
   {
-    title: "MediConnect",
-    category: "Healthcare",
-    description: "HIPAA-compliant telehealth platform connecting 10,000+ patients with healthcare providers.",
-    tech: ["React Native", "Python", "Docker"],
-    metric: "10K+ active patients",
+    title: "SMCF",
+    category: "Fintech",
+    description: "Digitized chama and SACCO operations with intergrated Executive dashboards for money management.",
+    tech: ["React Native", "GO", "Docker"],
+    metric: "10K+ transactions daily",
   },
   {
-    title: "LogiFlow",
-    category: "Logistics",
-    description: "End-to-end supply chain management system reducing delivery times by 35% across 12 countries.",
-    tech: ["Flutter", "Kotlin", "GraphQL"],
+    title: "Vconect",
+    category: "Ecommerce",
+    description: "A fully fledged ecommerce platform with intergrated payment systems.",
+    tech: ["Typescript", "Rust", "Docker"],
     metric: "35% faster deliveries",
   },
   {
     title: "EduSphere",
     category: "EdTech",
     description: "Adaptive learning platform serving 500K+ students with AI-powered personalized curricula.",
-    tech: ["TypeScript", "Python", "TensorFlow"],
-    metric: "500K+ students",
+    tech: ["TypeScript", "Python", "GO","Rust"],
+    metric: "50K+ students",
   },
 ];
 

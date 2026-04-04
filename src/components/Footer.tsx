@@ -1,6 +1,32 @@
 import { Mail, MapPin, Phone, Linkedin, Twitter, Github } from "lucide-react";
 
 const Footer = () => {
+  const socialLinks = [
+    { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { Icon: Github, href: "https://github.com", label: "GitHub" },
+  ];
+
+  const companyLinks = [
+    { label: "About Us", href: "#about" },
+    { label: "Our Process", href: "#process" },
+    { label: "Portfolio", href: "#portfolio" },
+  ];
+
+  const footerLinks = [
+    { label: "Terms", href: "#terms" },
+    { label: "Privacy", href: "#privacy" },
+    { label: "Cookies", href: "#cookies" },
+  ];
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:excel6737@gmail.com";
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+254117487554";
+  };
+
   return (
     <footer className="border-t border-border bg-secondary/30 pt-16 pb-8">
       <div className="container">
@@ -11,13 +37,16 @@ const Footer = () => {
               Vector <span className="text-primary">Labs</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Engineering world-class software products for startups and enterprises since 2014.
+              Engineering world-class software products for startups and enterprises since 2025.
             </p>
             <div className="flex gap-3">
-              {[Linkedin, Twitter, Github].map((Icon, i) => (
+              {socialLinks.map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={label}
                   className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                 >
                   <Icon size={16} />
@@ -32,7 +61,7 @@ const Footer = () => {
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               {["Mobile Development", "Web Applications", "Custom Software", "Cloud & DevOps", "API & Backend", "AI & Machine Learning"].map((s) => (
                 <li key={s}>
-                  <a href="#services" className="hover:text-foreground transition-colors">{s}</a>
+                  <a href="#services" className="hover:text-foreground transition-colors cursor-pointer">{s}</a>
                 </li>
               ))}
             </ul>
@@ -42,9 +71,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Company</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              {["About Us", "Our Process", "Portfolio", "Careers", "Blog", "Privacy Policy"].map((s) => (
-                <li key={s}>
-                  <a href="#" className="hover:text-foreground transition-colors">{s}</a>
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="hover:text-foreground transition-colors cursor-pointer">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -56,15 +85,25 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail size={14} className="text-primary" />
-                hello@vectorlabs.dev
+                <button
+                  onClick={handleEmailClick}
+                  className="hover:text-foreground transition-colors cursor-pointer text-left"
+                >
+                  excel6737@gmail.com
+                </button>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={14} className="text-primary" />
-                +1 (415) 555-0142
+                <button
+                  onClick={handlePhoneClick}
+                  className="hover:text-foreground transition-colors cursor-pointer text-left"
+                >
+                  +254117487554
+                </button>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="text-primary mt-0.5" />
-                <span>San Francisco, CA<br />London, UK • Cape Town, ZA</span>
+                <span>Nairobi, Kenya</span>
               </li>
             </ul>
           </div>
@@ -75,9 +114,11 @@ const Footer = () => {
             © 2026 Vector Labs. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Cookies</a>
+            {footerLinks.map((link) => (
+              <a key={link.label} href={link.href} className="hover:text-foreground transition-colors cursor-pointer">
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -86,3 +127,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

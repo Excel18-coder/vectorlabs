@@ -4,40 +4,23 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote: "Vector Labs transformed our outdated systems into a modern platform that handles 10x our previous traffic. Their engineering team is truly world-class.",
-    name: "Sarah Chen",
-    role: "CTO, FinTrack",
+    name: "Dyvinne",
+    role: "CEO,Vconect",
     rating: 5,
   },
   {
     quote: "The mobile app they built for us went from concept to App Store in 12 weeks. User engagement increased by 300% within the first month of launch.",
-    name: "James Mwangi",
-    role: "CEO, MediConnect",
+    name: "Ian Abungana",
+    role: "CEO, SMCF",
     rating: 5,
   },
   {
     quote: "Working with Vector Labs felt like having an extension of our own team. They're proactive, transparent, and deliver consistently high-quality work.",
-    name: "Lisa van der Berg",
-    role: "VP Engineering, LogiFlow",
+    name: "John Wagombe",
+    role: "CEO,Opesha solutions",
     rating: 5,
   },
-  {
-    quote: "Their AI expertise helped us build a recommendation engine that improved our user retention by 45%. Highly recommend for any ML-driven project.",
-    name: "David Kim",
-    role: "Product Lead, EduSphere",
-    rating: 5,
-  },
-  {
-    quote: "We needed a complex payment system built fast. Vector Labs delivered ahead of schedule and the system has processed $50M+ with zero downtime.",
-    name: "Amara Osei",
-    role: "Founder, NexaPay",
-    rating: 5,
-  },
-  {
-    quote: "From architecture to deployment, they handled everything with precision. Our platform now serves users across 30+ countries without a hitch.",
-    name: "Marco Rossi",
-    role: "Director of Tech, CloudScale",
-    rating: 5,
-  },
+ 
 ];
 
 const TestimonialsSection = () => {
