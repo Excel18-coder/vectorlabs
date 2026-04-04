@@ -4,7 +4,7 @@ const Footer = () => {
   const socialLinks = [
     { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { Icon: Github, href: "https://github.com", label: "GitHub" },
+    { Icon: Github, href: "https://github.com/Excel18-coder", label: "GitHub" },
   ];
 
   const companyLinks = [
@@ -28,9 +28,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border bg-secondary/30 pt-16 pb-8">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="border-t border-border bg-secondary/30 pt-12 sm:pt-16 pb-6 sm:pb-8">
+      <div className="container px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="font-bold text-xl text-foreground mb-4">
@@ -109,11 +109,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p className="text-xs sm:text-sm text-muted-foreground order-2 sm:order-1">
             © 2026 Vector Labs. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground order-1 sm:order-2">
             {footerLinks.map((link) => (
               <a key={link.label} href={link.href} className="hover:text-foreground transition-colors cursor-pointer">
                 {link.label}

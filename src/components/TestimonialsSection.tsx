@@ -25,12 +25,17 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-secondary/50">
-      <div className="container">
+    <section id="testimonials" className="py-24 md:py-32 bg-gradient-to-b from-secondary/50 via-secondary/30 to-background relative overflow-hidden">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+      </div>
+      {/* End background */}
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -48,8 +53,7 @@ const TestimonialsSection = () => {
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="rounded-2xl border border-border bg-background p-8 flex flex-col"
             >

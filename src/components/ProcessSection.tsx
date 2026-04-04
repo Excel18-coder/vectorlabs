@@ -34,12 +34,24 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section id="process" className="py-24 md:py-32">
-      <div className="container">
+    <section id="process" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Futuristic background with tech lines */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/30" />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <svg className="absolute inset-0 w-full h-full opacity-5 pointer-events-none">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+            <circle cx="25" cy="25" r="1" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dots)" />
+      </svg>
+      {/* End background */}
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -52,13 +64,12 @@ const ProcessSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="relative rounded-2xl border border-border bg-background p-8"
             >

@@ -42,12 +42,33 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 md:py-32">
-      <div className="container">
+    <section id="services" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Futuristic background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-5">
+        <svg preserveAspectRatio="none" viewBox="0 0 1000 1000" className="w-full h-full">
+          <defs>
+            <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: 'rgb(var(--color-primary))', stopOpacity: 0.1 }} />
+              <stop offset="100%" style={{ stopColor: 'rgb(var(--color-primary))', stopOpacity: 0 }} />
+            </linearGradient>
+          </defs>
+          <rect width="1000" height="1000" fill="url(#gridGradient)" />
+          {Array.from({ length: 10 }).map((_, i) => (
+            <line key={`h${i}`} x1="0" y1={i * 100} x2="1000" y2={i * 100} stroke="currentColor" strokeWidth="0.5" opacity="0.1" />
+          ))}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <line key={`v${i}`} x1={i * 100} y1="0" x2={i * 100} y2="1000" stroke="currentColor" strokeWidth="0.5" opacity="0.1" />
+          ))}
+        </svg>
+      </div>
+      {/* End background */}
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -65,8 +86,7 @@ const ServicesSection = () => {
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-2xl border border-border bg-background p-8 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
             >

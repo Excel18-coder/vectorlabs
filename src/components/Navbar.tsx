@@ -9,22 +9,20 @@ const navLinks = [
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <motion.nav
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-bold tracking-tight text-foreground">
-          Vector <span className="text-primary">Labs</span>
+        <a href="/" className="flex items-center gap-2 cursor-pointer">
+          <img src="/favicon.ico" alt="Vector Labs" className="w-8 h-8" />
+          <span className="text-xl font-bold tracking-tight text-foreground">
+            Vector <span className="text-primary">Labs</span>
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -37,9 +35,11 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="rounded-full px-6">
-            Get in Touch
-          </Button>
+          <a href="https://wa.me/254117487554" target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="rounded-full px-6">
+              Get in Touch
+            </Button>
+          </a>
         </div>
 
         <button
@@ -67,13 +67,15 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="rounded-full w-fit px-6">
-              Get in Touch
-            </Button>
+            <a href="https://wa.me/254117487554" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="rounded-full w-fit px-6">
+                Get in Touch
+              </Button>
+            </a>
           </div>
         </motion.div>
       )}
-    </motion.nav>
+    </nav>
   );
 };
 

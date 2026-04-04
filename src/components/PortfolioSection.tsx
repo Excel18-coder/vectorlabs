@@ -34,12 +34,23 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="py-24 md:py-32 bg-secondary/50">
-      <div className="container">
+    <section id="portfolio" className="py-24 md:py-32 bg-gradient-to-b from-background via-secondary/50 to-secondary/30 relative overflow-hidden">
+      {/* Futuristic tech pattern background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(var(--color-primary), 0.1) 24px, rgba(var(--color-primary), 0.1) 26px),
+            repeating-linear-gradient(90deg, transparent, transparent 24px, rgba(var(--color-primary), 0.1) 24px, rgba(var(--color-primary), 0.1) 26px)
+          `
+        }} />
+      </div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-primary/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      {/* End background */}
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -57,8 +68,7 @@ const PortfolioSection = () => {
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-2xl border border-border bg-background p-8 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
             >
