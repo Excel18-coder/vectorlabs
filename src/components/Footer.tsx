@@ -28,13 +28,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border bg-secondary/30 pt-12 sm:pt-16 pb-6 sm:pb-8">
+    <footer className="border-t border-border bg-secondary/45 pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="font-bold text-xl text-white mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-              Vector <span className="text-blue-400">Labs</span>
+            <div className="font-bold text-xl text-foreground mb-4">
+              Vector <span className="text-primary">Labs</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Engineering world-class software products for startups and enterprises since 2025.

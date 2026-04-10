@@ -42,21 +42,18 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 md:py-32 relative overflow-hidden">
-      {/* Tech-focused background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-950 to-slate-950" />
-      {/* Hexagon pattern background */}
-      <svg className="absolute inset-0 w-full h-full opacity-15" preserveAspectRatio="none">
+    <section id="services" className="py-24 md:py-32 relative overflow-hidden bg-secondary/35">
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-secondary/30" />
+      <svg className="absolute inset-0 w-full h-full opacity-40" preserveAspectRatio="none">
         <defs>
           <pattern id="hexagon" width="100" height="100" patternUnits="userSpaceOnUse">
-            <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="none" stroke="rgba(59,130,246,0.5)" strokeWidth="1"/>
+            <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="none" stroke="rgba(80,70,56,0.18)" strokeWidth="1"/>
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#hexagon)" />
       </svg>
-      {/* Tech glow elements */}
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-600 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-1000" />
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-foreground/5 rounded-full blur-3xl" />
       
       {/* End background */}
       <div className="container relative z-10">
@@ -66,12 +63,12 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm uppercase tracking-widest text-blue-400 font-semibold mb-3" style={{ textShadow: '0 0 15px rgba(0,0,0,0.7)' }}>What We Do</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" style={{ textShadow: '0 0 25px rgba(0,0,0,0.8)' }}>
-            End-to-End Software Services
+          <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">Capabilities</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-4">
+            End-to-End Product Delivery
           </h2>
-          <p className="text-gray-200 text-lg max-w-2xl mx-auto" style={{ textShadow: '0 0 15px rgba(0,0,0,0.6)' }}>
-            We cover the full spectrum of software development — from ideation to deployment and beyond.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Cross-functional teams aligned to your business goals — from strategy and design to engineering and scale.
           </p>
         </motion.div>
 
@@ -82,7 +79,7 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group rounded-2xl border border-border bg-background p-8 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+              className="group rounded-2xl border border-border/80 bg-background/90 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />

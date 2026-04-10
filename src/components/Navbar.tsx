@@ -16,18 +16,18 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/70 shadow-sm">
       <div className="container flex items-center justify-between h-16">
         <a href="/" className="flex items-center gap-2 cursor-pointer">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center font-bold text-white text-sm shadow-lg">
+          <div className="w-8 h-8 bg-gradient-to-br from-primary to-[hsl(25,45%,24%)] rounded-lg flex items-center justify-center font-bold text-primary-foreground text-sm shadow-md">
             VL
           </div>
-          <span className="text-xl font-bold tracking-tight text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-            Vector <span className="text-blue-400">Labs</span>
+          <span className="text-xl font-bold tracking-tight text-foreground">
+            Vector <span className="text-primary">Labs</span>
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -38,8 +38,8 @@ const Navbar = () => {
             </a>
           ))}
           <a href="https://wa.me/254117487554" target="_blank" rel="noopener noreferrer">
-            <Button size="sm" className="rounded-full px-6">
-              Get in Touch
+            <Button size="sm" className="rounded-full px-6 shadow-sm">
+              Book a Call
             </Button>
           </a>
         </div>
@@ -70,8 +70,8 @@ const Navbar = () => {
               </a>
             ))}
             <a href="https://wa.me/254117487554" target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="rounded-full w-fit px-6">
-                Get in Touch
+              <Button size="sm" className="rounded-full w-fit px-6 shadow-sm">
+                Book a Call
               </Button>
             </a>
           </div>

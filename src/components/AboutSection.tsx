@@ -41,7 +41,7 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Our team of 5 senior engineers, designers, and strategists work
-              collaboratively to deliver high quality products.
+              collaboratively to deliver high-quality products.
             
             </p>
 

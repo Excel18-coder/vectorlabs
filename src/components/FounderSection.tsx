@@ -54,7 +54,7 @@ const FounderSection = () => {
             <div className="relative w-full max-w-xs sm:max-w-md">
               {/* Glow effect */}
               <motion.div
-                animate={{ boxShadow: ["0 0 60px rgba(var(--color-primary), 0.3)", "0 0 80px rgba(var(--color-primary), 0.2)"] }}
+                animate={{ boxShadow: ["0 0 60px hsl(var(--primary) / 0.22)", "0 0 80px hsl(var(--primary) / 0.15)"] }}
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
               />
@@ -68,7 +68,7 @@ const FounderSection = () => {
                 <div className="relative aspect-square rounded-3xl overflow-hidden border-2 border-primary/30 shadow-2xl">
                   {/* Animated border glow */}
                   <motion.div
-                    animate={{ boxShadow: ["inset 0 0 30px rgba(var(--color-primary), 0.2)", "inset 0 0 60px rgba(var(--color-primary), 0.1)"] }}
+                    animate={{ boxShadow: ["inset 0 0 30px hsl(var(--primary) / 0.16)", "inset 0 0 60px hsl(var(--primary) / 0.1)"] }}
                     transition={{ duration: 3, repeat: Infinity }}
                     className="absolute inset-0 rounded-3xl"
                   />
@@ -133,7 +133,7 @@ const FounderSection = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-muted-foreground leading-relaxed mb-8"
             >
-              Visionary entrepreneur,software engineer and architect dedicated to transforming ideas into world-class digital solutions. With a passion for innovation and a commitment to excellence, I lead Vector Labs to deliver exceptional results that drive business growth.
+              Visionary entrepreneur, software engineer, and architect dedicated to transforming ideas into world-class digital solutions. With a passion for innovation and a commitment to excellence, I lead Vector Labs to deliver exceptional results that drive business growth.
             </motion.p>
 
             <motion.div
